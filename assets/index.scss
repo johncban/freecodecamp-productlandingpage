@@ -1,0 +1,46 @@
+$height: 100%;
+//$nature: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg");
+$bg_size: cover;
+$bg_color: #24355C;
+$s-max-width: 768px;
+$l-min-width: 800px;
+$l-max-width: 850px;
+
+$breakpoint-tablet: 768px;
+
+html,
+body,
+header {
+    height: $height;
+}
+
+.intro {
+    //background: $nature no-repeat center center fixed;
+    height: $height;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.top-nav-collapse {
+    background-color: $bg_color;
+}
+
+
+
+
+@media (max-width: $s-max-width) {
+    .navbar:not(.top-nav-collapse) {
+        background-color: $bg_color !important;
+    }
+}
+
+@media (min-width: $l-min-width) and (max-width: $l-max-width) {
+    .navbar:not(.top-nav-collapse) {
+        background-color: $bg_color !important;
+    }
+}
+
+
+ 
