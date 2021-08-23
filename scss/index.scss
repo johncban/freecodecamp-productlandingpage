@@ -1,22 +1,93 @@
-$body-height: 3000px;
+$mt: 18%;
+$nav-webkit: all 0.5s ease;
+
+// Transition Values
+$hb-opacity: 0;
+$hb-t: 0.2;
+$bt-opacity: 1;
+$bt-transform: none;
+$bt-adelay: 2s;
+
+$r-opacity: 0;
+$rt-opacity: 1;
+$r-scale: 1.2;
+$r-transform: none;
+$r-one-adelay: 20s;
+$r-two-adelay: 20s;
+$r-three-adelay: 20s;
 
 
-/*
-body {
-    height: $body-height;
-}
-*/
 
 
 nav {
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: $nav-webkit;
+    -moz-transition: $nav-webkit;
+    -o-transition: $nav-webkit;
+    transition: $nav-webkit;
+}
+
+.h-one {
+    margin-top: $mt;
 }
 
 
+
+/* Header Transition - BEGIN */
 .header-banner {
-    color: rgba(29, 191, 255, 0.699);
+    opacity: $hb-opacity;
+    transform: scale($hb-t);
+}
+.banner-transition {
+    opacity: $bt-opacity;
+    transform: $bt-transform;
+    animation-delay: $bt-adelay;
+}
+/* Header Transition - END */
+
+.row-feature-one{
+    opacity: $r-opacity;
+    transform: scale($r-scale);
+}
+.row-feature-two{
+    opacity: $r-opacity;
+    transform: scale($r-scale);
+}
+.row-feature-three{
+    opacity: $r-opacity;
+    transform: scale($r-scale);
 }
 
+
+.row-transition-one {
+    opacity: $rt-opacity;
+    transform: $r-transform;
+    animation-delay: $r-one-adelay;
+}
+.row-transition-two {
+    opacity: $rt-opacity;
+    transform: $r-transform;
+    animation-delay: $r-two-adelay;
+}
+.row-transition-three {
+    opacity: $rt-opacity;
+    transform: $r-transform;
+    animation-delay: $r-three-adelay;
+}
+
+
+
+/** Media Queries **/
+@media (prefers-reduced-motion: no-preference) {
+    .header-banner {
+        transition: opacity 1.5s ease, transform 0.5s ease;
+    }
+    .row-feature-one {
+        transition: opacity 2s ease, transform 0.2s ease;
+    }
+    .row-feature-two {
+        transition: opacity 4s ease, transform 0.4s ease;
+    }
+    .row-feature-three {
+        transition: opacity 8s ease, transform 0.8s ease;
+    }
+}
