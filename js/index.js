@@ -47,21 +47,37 @@ const observerRowThree = new IntersectionObserver(entries => {
 
 
 
-$(document).ready(function () {
-    $('.sidenav').sidenav();
-    $('.parallax').parallax();
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > 30) {
-            $("nav").removeClass("black");
-            $("nav").addClass("transparent");
-            $("#logo").addClass("blue-text");
-            $("#m-one").addClass("blue-text");
-        }
-        else {
-            $("nav").removeClass("transparent");
-            $("nav").addClass("black");
-            $("#logo").removeClass("blue-text");
-            $("#m-one").removeClass("blue-text");
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var sidenavs = document.querySelectorAll('.sidenav')
+    var para = document.querySelectorAll('.parallax')
+
+    M.Parallax.init(para)
+    M.Sidenav.init(sidenavs)
+
+
+    window.addEventListener("scroll", function () {
+        const nav = document.getElementsByTagName("nav")[0]
+        const logo = document.getElementById("logo")
+        const m_one = document.getElementById("m-one")
+        const m_two = document.getElementById("m-two")
+        const m_three = document.getElementById("m-three")
+        const top = window.pageYOffset
+        if (top > 15) {
+            nav.classList.add("transparent")
+            nav.classList.remove("black")
+            logo.classList.add("blue-text")
+            m_one.classList.add("blue-text")
+            m_two.classList.add("blue-text")
+            m_three.classList.add("blue-text")
+        } else {
+            nav.classList.remove("transparent")
+            nav.classList.add("black")
+            logo.classList.remove("blue-text")
+            m_one.classList.remove("blue-text")
+            m_two.classList.remove("blue-text")
+            m_three.classList.remove("blue-text")
         }
     })
 
@@ -81,8 +97,4 @@ $(document).ready(function () {
     observerRowOne.observe(document.querySelector('.row-wrapper-one'));
     observerRowTwo.observe(document.querySelector('.row-wrapper-two'));
     observerRowThree.observe(document.querySelector('.row-wrapper-three'));
-
-
 });
-
-
