@@ -2,80 +2,73 @@ nav {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
+  transition: all 0.5s ease; }
 
 .h-one {
-  margin-top: 18%;
-}
+  margin-top: 18%; }
+
+.logo {
+  display: inline-block;
+  height: 100%; }
+
+.logo > img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
 
 .main-content {
-  flex: auto;
-}
+  flex: auto; }
 
 /* Header Transition - BEGIN */
 .header-banner {
   opacity: 0;
-  transform: scale(0.2);
-}
+  transform: scale(0.2); }
 
 .banner-transition {
   opacity: 1;
   transform: none;
-  animation-delay: 2s;
-}
+  animation-delay: 2s; }
 
 /* Header Transition - END */
 .row-feature-one {
   opacity: 0;
-  transform: scale(1.2);
-}
+  transform: scale(1.2); }
 
 .row-feature-two {
   opacity: 0;
-  transform: scale(1.2);
-}
+  transform: scale(1.2); }
 
 .row-feature-three {
   opacity: 0;
-  transform: scale(1.2);
-}
+  transform: scale(1.2); }
 
 .row-transition-one {
   opacity: 1;
   transform: none;
-  animation-delay: 20s;
-}
+  animation-delay: 20s; }
 
 .row-transition-two {
   opacity: 1;
   transform: none;
-  animation-delay: 20s;
-}
+  animation-delay: 20s; }
 
 .row-transition-three {
   opacity: 1;
   transform: none;
-  animation-delay: 20s;
-}
+  animation-delay: 20s; }
 
 /** Media Queries **/
 @media (prefers-reduced-motion: no-preference) {
   .header-banner {
-    transition: opacity 1.5s ease, transform 0.5s ease;
-  }
+    transition: opacity 1.5s ease, transform 0.5s ease; }
 
   .row-feature-one {
-    transition: opacity 2s ease, transform 0.2s ease;
-  }
+    transition: opacity 2s ease, transform 0.2s ease; }
 
   .row-feature-two {
-    transition: opacity 4s ease, transform 0.4s ease;
-  }
+    transition: opacity 4s ease, transform 0.4s ease; }
 
   .row-feature-three {
-    transition: opacity 8s ease, transform 0.8s ease;
-  }
-}
+    transition: opacity 8s ease, transform 0.8s ease; } }
 
 /*# sourceMappingURL=index.css.map */
