@@ -6,6 +6,8 @@ const rowfeaturetwo = document.querySelector('.row-feature-two');
 const rowfeaturethree = document.querySelector('.row-feature-three');
 
 
+
+
 // Create the header observer, same as before:
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -44,7 +46,6 @@ const observerRowThree = new IntersectionObserver(entries => {
         rowfeaturethree.classList.remove('row-transition-three');
     });
 });
-
 
 
 
@@ -94,7 +95,12 @@ document.addEventListener('DOMContentLoaded', function () {
     rowfeaturetwo.classList.remove('row-transition-two');
     rowfeaturethree.classList.remove('row-transition-three');
 
+    
+
     observerRowOne.observe(document.querySelector('.row-wrapper-one'));
     observerRowTwo.observe(document.querySelector('.row-wrapper-two'));
     observerRowThree.observe(document.querySelector('.row-wrapper-three'));
+
+
+    
 });

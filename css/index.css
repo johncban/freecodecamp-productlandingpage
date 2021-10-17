@@ -1,3 +1,8 @@
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 50%; }
+
 nav {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -18,6 +23,23 @@ nav {
 
 .main-content {
   flex: auto; }
+
+.vid-1-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+  z-index: 1; }
+
+.bkg-1-overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)); }
+
+.bkg-2-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
+  z-index: 1; }
 
 /* Header Transition - BEGIN */
 .header-banner {
@@ -57,6 +79,10 @@ nav {
   transform: none;
   animation-delay: 20s; }
 
+#card-one {
+  font-size: 40px !important;
+  font-weight: 500; }
+
 /** Media Queries **/
 @media (prefers-reduced-motion: no-preference) {
   .header-banner {
@@ -70,5 +96,25 @@ nav {
 
   .row-feature-three {
     transition: opacity 8s ease, transform 0.8s ease; } }
+@media only screen and (min-width: 360px) {
+  .container {
+    width: 90%;
+    height: fit-content; }
+
+  #card-one {
+    font-size: 15px !important; } }
+@media only screen and (min-width: 375px) {
+  .container {
+    width: 90%;
+    height: fit-content; }
+
+  #card-one {
+    font-size: 15px !important; } }
+@media only screen and (min-width: 601px) {
+  .container {
+    width: 85%; } }
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 70%; } }
 
 /*# sourceMappingURL=index.css.map */
