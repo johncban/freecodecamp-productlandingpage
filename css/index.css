@@ -64,6 +64,31 @@ nav {
   opacity: 0;
   transform: scale(1.2); }
 
+.card-opacity {
+  background: #fff;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  opacity: .8;
+  z-index: -10; }
+
+.btn-border {
+  border: 1px solid orange; }
+
+.hov-opacity:hover {
+  background: #000;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  opacity: .7;
+  z-index: -20; }
+
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none; }
+
+.list-inline > li {
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px; }
+
 .row-transition-one {
   opacity: 1;
   transform: none;
