@@ -51,6 +51,22 @@ const observerRowThree = new IntersectionObserver(entries => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    objectFitImages();
+
+
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
+
+
+    /* init Jarallax */
+    jarallax(document.querySelectorAll('.jarallax'));
+
+    jarallax(document.querySelectorAll('.jarallax-keep-img'), {
+      keepImg: true,
+    });
+
+
     var sidenavs = document.querySelectorAll('.sidenav')
     var para = document.querySelectorAll('.parallax')
 
@@ -64,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const m_one = document.getElementById("m-one")
         const m_two = document.getElementById("m-two")
         const m_three = document.getElementById("m-three")
+        const m_four = document.getElementById("m-four")
         const top = window.pageYOffset
         if (top > 15) {
             nav.classList.add("transparent")
@@ -72,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
             m_one.classList.add("blue-text")
             m_two.classList.add("blue-text")
             m_three.classList.add("blue-text")
+            m_four.classList.add("blue-text")
         } else {
             nav.classList.remove("transparent")
             nav.classList.add("black")
@@ -79,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
             m_one.classList.remove("blue-text")
             m_two.classList.remove("blue-text")
             m_three.classList.remove("blue-text")
+            m_four.classList.remove("blue-text")
         }
     })
 
