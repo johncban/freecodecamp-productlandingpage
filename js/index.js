@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
     M.Sidenav.init(sidenavs)
 
 
+
     window.addEventListener("scroll", function () {
         const nav = document.getElementsByTagName("nav")[0]
         const logo = document.getElementById("logo")
