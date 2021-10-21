@@ -1,5 +1,6 @@
 // Declare transition header container
-const headerbanner = document.querySelector('.header-banner');
+//const headerbanner = document.querySelector('.header-banner');
+
 // Declare transition for 1st row feature section
 const rowfeatureone = document.querySelector('.row-feature-one');
 const rowfeaturetwo = document.querySelector('.row-feature-two');
@@ -9,6 +10,7 @@ const rowfeaturethree = document.querySelector('.row-feature-three');
 
 
 // Create the header observer, same as before:
+/*
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -18,6 +20,8 @@ const observer = new IntersectionObserver(entries => {
         headerbanner.classList.remove('banner-transition');
     });
 });
+*/
+
 // Create the row observer, same as before:
 const observerRowOne = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -86,28 +90,28 @@ document.addEventListener('DOMContentLoaded', function () {
         if (top > 15) {
             nav.classList.add("transparent")
             nav.classList.remove("black")
-            logo.classList.add("blue-text")
-            m_one.classList.add("blue-text")
-            m_two.classList.add("blue-text")
-            m_three.classList.add("blue-text")
-            m_four.classList.add("blue-text")
+            logo.classList.add("orange-text")
+            m_one.classList.add("orange-text")
+            m_two.classList.add("orange-text")
+            m_three.classList.add("orange-text")
+            m_four.classList.add("orange-text")
         } else {
             nav.classList.remove("transparent")
             nav.classList.add("black")
-            logo.classList.remove("blue-text")
-            m_one.classList.remove("blue-text")
-            m_two.classList.remove("blue-text")
-            m_three.classList.remove("blue-text")
-            m_four.classList.remove("blue-text")
+            logo.classList.remove("orange-text")
+            m_one.classList.remove("orange-text")
+            m_two.classList.remove("orange-text")
+            m_three.classList.remove("orange-text")
+            m_four.classList.remove("orange-text")
         }
     })
 
 
     // --- BEGIN --- HEADER TRANSITION
     // Remove the transition class
-    headerbanner.classList.remove('banner-transition');
+    //headerbanner.classList.remove('banner-transition');
     // Create the observer, same as before:
-    observer.observe(document.querySelector('.banner-wrapper'));
+    //observer.observe(document.querySelector('.banner-wrapper'));
     // --- END --- HEADER TRANSITION
 
 

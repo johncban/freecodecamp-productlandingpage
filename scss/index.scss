@@ -128,12 +128,13 @@ nav {
     padding-left: 0;
     margin-left: -5px;
     list-style: none;
-  }
-  .list-inline > li {
+}
+
+.list-inline>li {
     display: inline-block;
     padding-right: 10px;
     padding-left: 10px;
-  }
+}
 
 
 
@@ -168,7 +169,7 @@ nav {
 
 
 .sidenav {
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.068); 
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.068);
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.74);
     backdrop-filter: blur(10px);
@@ -176,6 +177,36 @@ nav {
 
 
 
+
+/* label focus color */
+.input-field input:focus+label {
+    color: rgb(252, 186, 101) !important;
+}
+
+/* label underline focus color */
+.row .input-field input:focus {
+    border-bottom: 1px solid rgb(255, 166, 0) !important;
+    box-shadow: 0 1px 0 0 rgba(255, 186, 36, 0.342) !important
+}
+
+
+
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.568);
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(0, 0, 0, 0.568);
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(0, 0, 0, 0.568);
+}
 
 
 
@@ -204,19 +235,23 @@ nav {
         width: 90%;
         height: fit-content;
     }
+
     #card-one {
         font-size: 15px !important;
     }
 }
+
 @media only screen and (min-width: 375px) {
     .container {
         width: 90%;
         height: fit-content;
     }
+
     #card-one {
         font-size: 15px !important;
     }
 }
+
 @media only screen and (min-width: 601px) {
     .container {
         width: 85%;
