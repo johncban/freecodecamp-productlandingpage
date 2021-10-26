@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     AOS.init({
-      easing: 'ease-in-out-sine'
+        easing: 'ease-in-out-sine'
     });
 
 
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     jarallax(document.querySelectorAll('.jarallax'));
 
     jarallax(document.querySelectorAll('.jarallax-keep-img'), {
-      keepImg: true,
+        keepImg: true,
     });
 
 
@@ -95,12 +95,12 @@ document.addEventListener('DOMContentLoaded', function () {
     rowfeaturetwo.classList.remove('row-transition-two');
     rowfeaturethree.classList.remove('row-transition-three');
 
-    
+
 
     observerRowOne.observe(document.querySelector('.row-wrapper-one'));
     observerRowTwo.observe(document.querySelector('.row-wrapper-two'));
     observerRowThree.observe(document.querySelector('.row-wrapper-three'));
 
 
-    
+
 });
