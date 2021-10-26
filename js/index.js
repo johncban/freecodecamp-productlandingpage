@@ -1,26 +1,9 @@
-// Declare transition header container
-//const headerbanner = document.querySelector('.header-banner');
-
 // Declare transition for 1st row feature section
 const rowfeatureone = document.querySelector('.row-feature-one');
 const rowfeaturetwo = document.querySelector('.row-feature-two');
 const rowfeaturethree = document.querySelector('.row-feature-three');
 
 
-
-
-// Create the header observer, same as before:
-/*
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            headerbanner.classList.add('banner-transition');
-            return;
-        }
-        headerbanner.classList.remove('banner-transition');
-    });
-});
-*/
 
 // Create the row observer, same as before:
 const observerRowOne = new IntersectionObserver(entries => {
@@ -106,13 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
-
-    // --- BEGIN --- HEADER TRANSITION
-    // Remove the transition class
-    //headerbanner.classList.remove('banner-transition');
-    // Create the observer, same as before:
-    //observer.observe(document.querySelector('.banner-wrapper'));
-    // --- END --- HEADER TRANSITION
 
 
     rowfeatureone.classList.remove('row-transition-one');
