@@ -21,8 +21,10 @@ nav {
   top: 50%;
   transform: translateY(-50%); }
 
+/*
 .main-content {
   flex: auto; }
+*/
 
 .bkg-1-overlay {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)); }
